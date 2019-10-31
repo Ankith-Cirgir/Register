@@ -36,6 +36,12 @@ def register():
 def register_user():
     u = Username.get()
     p = Password.get()
+    if  u == '':
+        Label(Rscreen,text = 'Enter a valid Username !!!', fg = 'red').pack()
+        return
+    if p == '':
+        Label(Rscreen,text = 'Enter a valid Password !!!', fg = 'red').pack()
+        return
     fname = 'U&P.txt' 
     f = open(fname, "a")
     f.write('Username:'+u+"\n"+'Password:'+p+'\n')
