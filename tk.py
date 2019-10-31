@@ -10,6 +10,7 @@ def main_screen():
     Button(text = "LOGIN", height = '2', width = '30', command = login).pack()
     Label(text = "").pack()
     Button(text = 'NEW USER !',height = '2', width = '30',command = register).pack()
+    screen.mainloop()
 
 
 def register():
@@ -30,7 +31,7 @@ def register():
     Password_val.pack()
     Label(Rscreen,text = "").pack()
     Button(Rscreen,text = 'Register',height = '1', width = '10', command = register_user).pack()
-
+    Rscreen.mainloop()
 
 def register_user():
     u = Username.get()
@@ -59,7 +60,7 @@ def login():
     Password_val1.pack()
     Label(Lscreen,text = "").pack()
     Button(Lscreen,text = 'Login',height = '1', width = '10',command = login_verify).pack()
-
+    Lscreen.mainloop()
 def login_verify():
     U = Username_verify.get()
     P = Password_verify.get()
@@ -89,5 +90,5 @@ def login_verify():
     Username_val1.delete(0, END)
     Password_val1.delete(0, END)
 
-    
-main_screen()
+if __name__ == '__main__':
+    main_screen()
