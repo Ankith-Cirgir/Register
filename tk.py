@@ -42,6 +42,9 @@ def register_user():
     if p == '':
         Label(Rscreen,text = 'Enter a valid Password !!!', fg = 'red').pack()
         return
+    elif len(p)<8:
+        Label(Rscreen,text = 'Password must be greater than 8 charecters !!!!', fg = 'red').pack()
+        return
     fname = 'U&P.txt' 
     f = open(fname, "a")
     f.write('Username:'+u+"\n"+'Password:'+p+'\n')
